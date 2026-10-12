@@ -76,3 +76,41 @@ real Sales Invoice path and skips itself when accounting is not ready.
 ## Not done / bonus
 
 None of the optional bonus items (workout plans, personal training, member portal, WhatsApp/SMS, door webhook) were implemented.
+
+## Screenshots
+
+### Gym Dashboard
+
+![Gym Dashboard](screenshots/Gym%20Dashboard.png)
+
+### Check-in
+
+| Check-in 1 | Check-in 2 |
+|---|---|
+| ![Check-in 1](screenshots/Check%20in%201.png) | ![Check-in 2](screenshots/Check%20in%202.png) |
+
+| Check-in 3 | Check-in 4 |
+|---|---|
+| ![Check-in 3](screenshots/Check%20in%203.png) | ![Check-in 4](screenshots/Check%20in%204.png) |
+
+### Class Booking
+
+| Class Booking 1 | Class Booking 2 |
+|---|---|
+| ![Class Booking 1](screenshots/Class%20Booking%201.png) | ![Class Booking 2](screenshots/Class%20Booking%202.png) |
+
+| Class Booking 3 | New Class Booking |
+|---|---|
+| ![Class Booking 3](screenshots/Class%20Booking%203.png) | ![New Class Booking](screenshots/New%20Class%20Booking.png) |
+
+### Membership Freeze
+
+| Freeze 1 | Freeze 2 |
+|---|---|
+| ![Freeze 1](screenshots/Freeze%201.png) | ![Freeze 2](screenshots/Freeze%202.png) |
+
+![Freeze 3](screenshots/Freeze%203.png)
+
+### Cancelled Booking
+
+![Cancelled](screenshots/Cancelled.png)
