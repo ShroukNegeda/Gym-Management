@@ -85,6 +85,7 @@ Run `bench --site <site> migrate` after pulling (new DocTypes).
 Personal-training appointments (1:1 booking), the member web portal, and WhatsApp/SMS reminders were not implemented.
 
 
+
 ## Screenshots
 
 ### Gym Dashboard
@@ -121,4 +122,22 @@ Personal-training appointments (1:1 booking), the member web portal, and WhatsAp
 
 ### Cancelled Booking
 
-![Cancelled](screenshots/Cancelled.png)
+![Cancelled Booking](screenshots/Cancelled.png)
+
+### Workout Plans
+
+| Workout Plan 1 | Workout Plan 2 |
+|---|---|
+| ![Workout Plan 1](screenshots/Workout%20Plan%201.png) | ![Workout Plan 2](screenshots/Workout%20Plan%202.png) |
+
+### Body Measurements
+
+| Body Measurement 1 | Body Measurement 2 |
+|---|---|
+| ![Body Measurement 1](screenshots/Body%20Measurement%201.png) | ![Body Measurement 2](screenshots/Body%20Measurement%202.png) |
+
+![Body Measurement 3](screenshots/Body%20Measurement%203.png)
+
+### Door Access API
+
+![API Access](screenshots/API%20Access.png)
