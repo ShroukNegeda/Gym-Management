@@ -73,9 +73,67 @@ real Sales Invoice path and skips itself when accounting is not ready.
 * Contact details are created once as an ERPNext Contact linked to the Customer; later edits are not synced back.
 * Reminders and waitlist notifications are e-mails queued with `frappe.sendmail` (needs an outgoing e-mail account to actually leave the server).
 
-## Not done / bonus
+## Bonus features
 
-None of the optional bonus items (workout plans, personal training, member portal, WhatsApp/SMS, door webhook) were implemented.
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Not done
+
+Personal-trainin## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Bonus Features
+
+* **Workout plans & body measurements** - `Workout Plan` (a member's plan with a day-by-day exercise table; one Active plan per member) and `Body Measurement` (weight, height, body fat, circumferences; BMI is calculated).
+* **Door-controller REST API** - `gym_management/door_api.py`: `check_access` (POST; answers allow/deny with a reason and records a Gym Check In; repeated scans within 60 seconds count as one visit; exit is always allowed) and `get_active_members` (everyone allowed right now, for controllers that work offline). Authenticate with the API key/secret of a user that has the Front Desk role: `Authorization: token <key>:<secret>`.
+
+Run `bench --site <site> migrate` after pulling (new DocTypes).
+
+## Not done
+
+Personal-training appointments (1:1 booking), the member web portal, and WhatsApp/SMS reminders were not implemented.
 
 ## Screenshots
 
