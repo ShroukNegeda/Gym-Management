@@ -1,0 +1,74 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"h1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Front desk</b></span>\", \"col\": 12}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Check-in Desk\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Gym Member\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Gym Membership\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Class Booking\", \"col\": 3}}, {\"id\": \"h2\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Schedule &amp; management</b></span>\", \"col\": 12}}, {\"id\": \"s5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Class Session\", \"col\": 3}}, {\"id\": \"s6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Gym Dashboard\", \"col\": 3}}, {\"id\": \"s7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Membership Expiry Report\", \"col\": 3}}, {\"id\": \"s8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Membership Plan\", \"col\": 3}}]",
+ "creation": "2025-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Gym Management",
+ "links": [],
+ "modified": "2026-10-11 08:54:11.000000",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 50,
+ "shortcuts": [
+  {
+   "label": "Check-in Desk",
+   "link_to": "gym-checkin",
+   "type": "Page",
+   "color": "Green"
+  },
+  {
+   "label": "Gym Member",
+   "link_to": "Gym Member",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Gym Membership",
+   "link_to": "Gym Membership",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Class Booking",
+   "link_to": "Class Booking",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Class Session",
+   "link_to": "Class Session",
+   "type": "DocType",
+   "doc_view": "Calendar"
+  },
+  {
+   "label": "Gym Dashboard",
+   "link_to": "gym-dashboard",
+   "type": "Page",
+   "color": "Blue"
+  },
+  {
+   "label": "Membership Expiry Report",
+   "link_to": "Membership Expiry Report",
+   "type": "Report",
+   "is_query_report": 1
+  },
+  {
+   "label": "Membership Plan",
+   "link_to": "Membership Plan",
+   "type": "DocType",
+   "doc_view": "List"
+  }
+ ],
+ "title": "Gym Management"
+}

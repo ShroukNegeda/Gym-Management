@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-12 18:57:37.681012",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "day",
+  "exercise",
+  "sets",
+  "reps",
+  "weight_kg",
+  "rest_seconds",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "day",
+   "fieldtype": "Select",
+   "label": "Day",
+   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "exercise",
+   "fieldtype": "Data",
+   "label": "Exercise",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sets",
+   "fieldtype": "Int",
+   "label": "Sets",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reps",
+   "fieldtype": "Int",
+   "label": "Reps",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "label": "Weight Kg",
+   "precision": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rest_seconds",
+   "fieldtype": "Int",
+   "label": "Rest Seconds"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-12 18:57:37.681012",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Workout Plan Exercise",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}

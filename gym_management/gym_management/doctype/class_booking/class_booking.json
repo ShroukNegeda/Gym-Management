@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-11 08:50:24.958165",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "class_session",
+  "session_date",
+  "member",
+  "member_name",
+  "column_break_1",
+  "membership",
+  "status",
+  "booked_on",
+  "cancelled_on",
+  "late_cancellation"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_session",
+   "fieldtype": "Link",
+   "label": "Class Session",
+   "options": "Class Session",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "label": "Session Date",
+   "read_only": 1,
+   "in_list_view": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Gym Member",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Member Name",
+   "fetch_from": "member.member_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership",
+   "fieldtype": "Link",
+   "label": "Membership",
+   "options": "Gym Membership",
+   "read_only": 1,
+   "no_copy": 1,
+   "description": "Auto-set to the membership active on the session date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nWaitlisted\nAttended\nNo Show\nCancelled",
+   "default": "Booked",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "booked_on",
+   "fieldtype": "Datetime",
+   "label": "Booked On",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "cancelled_on",
+   "fieldtype": "Datetime",
+   "label": "Cancelled On",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "late_cancellation",
+   "fieldtype": "Check",
+   "label": "Late Cancellation",
+   "read_only": 1,
+   "no_copy": 1,
+   "description": "Cancelled inside the cancellation window (class credit not refunded)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-11 08:50:24.958165",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Class Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Gym Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Front Desk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Trainer",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "format:BKG-{YYYY}-{######}",
+ "title_field": "member_name",
+ "search_fields": "member_name,class_session"
+}

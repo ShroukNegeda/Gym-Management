@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-11 08:50:24.958165",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_item_group",
+  "default_income_account",
+  "column_break_1",
+  "cancellation_window_hours",
+  "enable_waitlist",
+  "no_show_limit",
+  "expiry_reminder_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_item_group",
+   "fieldtype": "Link",
+   "label": "Default Item Group",
+   "options": "Item Group",
+   "description": "Group for auto-created plan Items"
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Income Account",
+   "options": "Account",
+   "description": "Optional. Used as income account on plan Items"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancellation_window_hours",
+   "fieldtype": "Int",
+   "label": "Cancellation Window Hours",
+   "default": "4",
+   "description": "Min hours before a session to cancel without penalty"
+  },
+  {
+   "fieldname": "enable_waitlist",
+   "fieldtype": "Check",
+   "label": "Enable Waitlist",
+   "default": "1"
+  },
+  {
+   "fieldname": "no_show_limit",
+   "fieldtype": "Int",
+   "label": "No Show Limit",
+   "default": "3",
+   "description": "No-shows allowed per month before a warning"
+  },
+  {
+   "fieldname": "expiry_reminder_days",
+   "fieldtype": "Int",
+   "label": "Expiry Reminder Days",
+   "default": "7",
+   "description": "Days before expiry to notify the member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-11 08:50:24.958165",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Gym Manager",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "Front Desk",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "issingle": 1
+}

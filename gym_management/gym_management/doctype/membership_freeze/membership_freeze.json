@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-11 08:50:24.958165",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "freeze_from",
+  "freeze_to",
+  "days",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "freeze_from",
+   "fieldtype": "Date",
+   "label": "Freeze From",
+   "reqd": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "freeze_to",
+   "fieldtype": "Date",
+   "label": "Freeze To",
+   "reqd": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1,
+   "description": "Must be after Freeze From"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1,
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-11 08:50:24.958165",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Membership Freeze",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "istable": 1,
+ "editable_grid": 1
+}
