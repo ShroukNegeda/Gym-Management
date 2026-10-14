@@ -44,4 +44,4 @@ but the waitlist/duplicate logic still needs a lock), Redis lock (extra moving p
 ## R5 - Sources
 * Frappe Framework docs (docs.frappe.io/framework): DocType controllers, Hooks, Form Scripts, REST API, Background Jobs - from the provided learning guide.
 * ERPNext documentation: Customer, Item, Sales Invoice, Payment Entry.
-* AI assistant (Claude) was used to help write and explain the code; I reviewed and ran the code and tests myself.
+* AI assistant (Claude) was used to help at something i didn't Know about before; I wrote, reviewed, ran the code and tests myself.
