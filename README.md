@@ -82,7 +82,7 @@ Run `bench --site <site> migrate` after pulling (new DocTypes).
 
 ## Not done
 
-Personal-training appointments (1:1 booking), the member web portal, and WhatsApp/SMS reminders were not implemented.
+The member web portal and WhatsApp reminders were not implemented (SMS is supported through Frappe's SMS Settings).
 
 
 
