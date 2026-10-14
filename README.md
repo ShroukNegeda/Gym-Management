@@ -80,10 +80,9 @@ real Sales Invoice path and skips itself when accounting is not ready.
 
 Run `bench --site <site> migrate` after pulling (new DocTypes).
 
-## Not done
+## Not Done
 
 The member web portal and WhatsApp reminders were not implemented (SMS is supported through Frappe's SMS Settings).
-
 
 
 ## Screenshots
@@ -138,6 +137,32 @@ The member web portal and WhatsApp reminders were not implemented (SMS is suppor
 
 ![Body Measurement 3](screenshots/Body%20Measurement%203.png)
 
+### Gym Member
+
+![Gym Member](screenshots/Gym%20Member.png)
+
+### Trainer Availability
+
+![Trainer Availability](screenshots/Trainer%20Availability.png)
+
+### Personal Training Sessions
+
+| Personal Training Session 1 | Personal Training Session 2 |
+|---|---|
+| ![Personal Training Session 1](screenshots/Personal%20Training%20Session%201.png) | ![Personal Training Session 2](screenshots/Personal%20Training%20Session%202.png) |
+
+### SMS Notifications
+
+| SMS Notifications 1 | SMS Notifications 2 |
+|---|---|
+| ![SMS Notifications 1](screenshots/SMS%20Notifications%201.png) | ![SMS Notifications 2](screenshots/SMS%20Notifications%202.png) |
+
 ### Door Access API
 
 ![API Access](screenshots/API%20Access.png)
+
+## Project Demo Video
+
+Watch the project demonstration video:
+
+[**Watch Gym Management Demo on Google Drive**](PASTE_GOOGLE_DRIVE_LINK_HERE)
