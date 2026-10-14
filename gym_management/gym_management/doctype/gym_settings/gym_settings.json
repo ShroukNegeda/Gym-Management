@@ -11,7 +11,10 @@
   "cancellation_window_hours",
   "enable_waitlist",
   "no_show_limit",
-  "expiry_reminder_days"
+  "expiry_reminder_days",
+  "section_sms",
+  "enable_sms_notifications",
+  "sms_country_code"
  ],
  "fields": [
   {
@@ -58,11 +61,30 @@
    "label": "Expiry Reminder Days",
    "default": "7",
    "description": "Days before expiry to notify the member"
+  },
+  {
+   "fieldname": "section_sms",
+   "fieldtype": "Section Break",
+   "label": "SMS Notifications"
+  },
+  {
+   "fieldname": "enable_sms_notifications",
+   "fieldtype": "Check",
+   "label": "Enable SMS Notifications",
+   "default": "0",
+   "description": "Also send a short SMS (needs Frappe's SMS Settings to be configured)"
+  },
+  {
+   "fieldname": "sms_country_code",
+   "fieldtype": "Data",
+   "label": "SMS Country Code",
+   "depends_on": "enable_sms_notifications",
+   "description": "e.g. 20 for Egypt. Local numbers starting with 0 are converted to international format."
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-11 08:50:24.958165",
+ "modified": "2026-10-14 16:52:57.751459",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Settings",

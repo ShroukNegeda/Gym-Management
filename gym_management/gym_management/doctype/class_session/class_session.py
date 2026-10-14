@@ -5,7 +5,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import cint, get_time, getdate, now_datetime
 
-from gym_management import booking, utils
+from gym_management import booking, personal_training, utils
 
 
 class ClassSession(Document):
@@ -16,6 +16,7 @@ class ClassSession(Document):
         self.validate_capacity()
         self.validate_overlaps("trainer", _("Trainer {0} already has a session at this time: {1}"))
         self.validate_overlaps("room", _("Room {0} is already used by another session at this time: {1}"))
+        personal_training.check_class_session_conflict(self)
         self.validate_status_change()
 
     def on_update(self):

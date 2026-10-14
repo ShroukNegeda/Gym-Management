@@ -50,19 +50,31 @@ def make_class(trainer=None, room=None, capacity=None, duration=60, name=None):
 
 
 import random
+
 def make_session(gym_class, trainer=None, room=None, capacity=None, days_ahead=1, start_time=None):
+    cls = frappe.get_doc("Gym Class", gym_class)
+
     if not trainer:
-        trainer = make_trainer().name
+        trainer = cls.default_trainer or make_trainer().name
     if not room:
-        room = make_room().name
+        room = cls.default_room or make_room().name
+    if capacity is None:
+        capacity = cls.default_capacity
+
     if not start_time:
-        # استخدام ثواني أو دقائق عشوائية لتفادي التعارض التام في التوقيت
-        import time
+        import random
         start_time = f"{random.randint(8, 20):02d}:{random.randint(0, 59):02d}:00"
+
     return frappe.get_doc({
-        "doctype": "Class Session", "gym_class": gym_class, "trainer": trainer, "room": room, "capacity": capacity,
-        "session_date": add_days(today(), days_ahead), "start_time": start_time,
+        "doctype": "Class Session",
+        "gym_class": gym_class,
+        "trainer": trainer,
+        "room": room,
+        "capacity": capacity,
+        "session_date": add_days(today(), days_ahead),
+        "start_time": start_time,
     }).insert(ignore_permissions=True)
+
 
 
 def make_membership(member, plan, start_date=None, submit=True, **kw):

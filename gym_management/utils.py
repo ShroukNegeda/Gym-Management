@@ -183,12 +183,21 @@ def get_user_trainers(user=None):
 
 
 # ------------------------------------------------------------------ notifications
-def notify_member(member, subject, message):
+def notify_member(member, subject, message, sms=None):
+    """E-mail the member and, when enabled in Gym Settings, send a short SMS too.
+
+    ``sms`` is the SMS text (defaults to the subject). A failure in either channel is logged
+    and never blocks the business operation that triggered the notification."""
     email = frappe.db.get_value("Gym Member", member, "email")
-    if not email:
-        return
+    if email:
+        try:
+            frappe.sendmail(recipients=[email], subject=subject, message=message,
+                            reference_doctype="Gym Member", reference_name=member)
+        except Exception:
+            frappe.log_error(title="Gym Management: could not queue notification")
     try:
-        frappe.sendmail(recipients=[email], subject=subject, message=message,
-                        reference_doctype="Gym Member", reference_name=member)
+        from gym_management import sms as sms_module
+
+        sms_module.send_member_sms(member, sms or subject)
     except Exception:
-        frappe.log_error(title="Gym Management: could not queue notification")
+        frappe.log_error(title="Gym Management: could not queue SMS")

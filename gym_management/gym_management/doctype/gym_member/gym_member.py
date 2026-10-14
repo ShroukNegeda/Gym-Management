@@ -6,6 +6,20 @@ from frappe.utils import getdate, today, validate_email_address, validate_phone_
 from gym_management import utils
 
 
+def default_customer_group():
+    """A NON-group Customer Group for new members' Customers.
+
+    Selling Settings may point at a group such as "All Customer Groups", which ERPNext refuses for a
+    Customer, so that value is only used when it is a real (leaf) group."""
+    for name in (frappe.db.get_single_value("Selling Settings", "customer_group"), "Individual"):
+        if name and frappe.db.get_value("Customer Group", name, "is_group") == 0:
+            return name
+    leaf = frappe.get_all("Customer Group", filters={"is_group": 0}, pluck="name", limit=1)
+    if leaf:
+        return leaf[0]
+    frappe.throw(_("No Customer Group that is not a group exists. Create one first (Selling > Customer Group)."))
+
+
 class GymMember(Document):
     def validate(self):
         self.validate_contact_details()
@@ -37,7 +51,7 @@ class GymMember(Document):
             "doctype": "Customer",
             "customer_name": self.member_name,
             "customer_type": "Individual",
-            "customer_group": frappe.db.get_single_value("Selling Settings", "customer_group") or "Individual",
+            "customer_group": default_customer_group(),
             "territory": frappe.db.get_single_value("Selling Settings", "territory") or "All Territories",
         })
         customer.insert(ignore_permissions=True)
