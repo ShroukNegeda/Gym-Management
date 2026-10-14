@@ -169,4 +169,4 @@ The member web portal and WhatsApp reminders were not implemented (SMS is suppor
 
 Watch the project demonstration video:
 
-[**Watch Gym Management Demo on Google Drive**](PASTE_GOOGLE_DRIVE_LINK_HERE)
+[**Watch Gym Management Demo on Google Drive**](https://drive.google.com/file/d/1MANmYTVfCEXUfKSuFZ4JB8CavrLSo_Lc/view?usp=sharing)
